@@ -1,0 +1,33 @@
+data_CeO2\(1\1\1)
+_audit_creation_date              2025-04-06
+_audit_creation_method            'Materials Studio'
+_symmetry_space_group_name_H-M    'P1'
+_symmetry_Int_Tables_number       1
+_symmetry_cell_setting            triclinic
+loop_
+_symmetry_equiv_pos_as_xyz
+  x,y,z
+_cell_length_a                    3.8661
+_cell_length_b                    3.8661
+_cell_length_c                    23.6807
+_cell_angle_alpha                 90.0000
+_cell_angle_beta                  90.0000
+_cell_angle_gamma                 120.0000
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_occupancy
+Ce1    Ce    0.70000   0.30000   0.31773   0.00000  Uiso   1.00
+Ce2    Ce    0.03333   0.96667   0.45103   0.00000  Uiso   1.00
+Ce3    Ce    0.36667   0.63333   0.18443   0.00000  Uiso   1.00
+O4     O     0.03333   0.96667   0.15111   0.00000  Uiso   1.00
+O5     O     0.70000   0.30000   0.41771   0.00000  Uiso   1.00
+O6     O     0.36667   0.63333   0.28441   0.00000  Uiso   1.00
+O7     O     0.70000   0.30000   0.21776   0.00000  Uiso   1.00
+O8     O     0.03333   0.96667   0.35106   0.00000  Uiso   1.00
+O9     O     0.36667   0.63333   0.08446   0.00000  Uiso   1.00
