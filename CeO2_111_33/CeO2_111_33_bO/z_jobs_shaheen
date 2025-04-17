@@ -1,0 +1,22 @@
+#!/bin/bash
+#SBATCH --partition=workq
+#SBATCH --job-name=vasp
+#SBATCH --nodes=1
+#SBATCH --time=4:00:00
+#SBATCH --exclusive
+#SBATCH --err=std.err
+#SBATCH --output=std.out
+#----------------------------------------------------------#
+module switch PrgEnv-cray PrgEnv-intel
+module switch intel intel/19.0.5.281
+module load vasp/6.5.0
+export FI_CXI_RX_MATCH_MODE=software
+export MKL_DEBUG_CPU_TYPE=5
+export MKL_CBWR=auto
+export OMP_NUM_THREADS=1
+export LD_LIBRARY_PATH=/opt/cray/pe/netcdf/4.9.0.7/INTEL/2022.2/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/cray/pe/hdf5/1.12.2.7/INTEL/2022.2/lib:$LD_LIBRARY_PATH
+#----------------------------------------------------------#
+echo "The job "${SLURM_JOB_ID}" is running on "${SLURM_JOB_NODELIST}
+#----------------------------------------------------------#
+srun --ntasks=1536 --map-by-numa --hint=nomultithread ${VASP_HOME}/vasp_std
