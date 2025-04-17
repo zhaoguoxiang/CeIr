@@ -1,0 +1,7 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -J OOH-01
+
+date
+mpirun -np 192 vasp_std 1>vasp.log 2>vasp.err
+date
