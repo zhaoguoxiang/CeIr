@@ -1,0 +1,10 @@
+   ISTART = 0
+   ICHARG = 2
+
+ general:
+   SYSTEM = Graphite surface slap
+   ENMAX  = 400
+   ISMEAR =    2  ; SIGMA = 0.2
+   ALGO= Fast
+
+   LORBIT = 11
