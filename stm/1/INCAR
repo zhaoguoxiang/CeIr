@@ -1,6 +1,6 @@
 Global Parameters
-ISTART =  1            (Read existing wavefunction, if there)
-# ICHARG =  11         (Non-self-consistent: GGA/LDA band structures)
+ISTART =  0            (Read existing wavefunction, if there)
+ICHARG =  2            (Non-self-consistent: GGA/LDA band structures)
 LREAL  = .FALSE.       (Projection operators: automatic)
 ENCUT  =  520        (Cut-off energy for plane wave basis set, in eV)
 PREC   =  Accurate   (Precision level: Normal or Accurate, set Accurate when perform structure lattice relaxation calculation)
@@ -18,6 +18,7 @@ PREC   = Accurate      (Accurate strictly avoids any aliasing or wrap around err
 # NGXF    = 300        (FFT grid mesh density for nice charge/potential plots)
 # NGYF    = 300        (FFT grid mesh density for nice charge/potential plots)
 # NGZF    = 300        (FFT grid mesh density for nice charge/potential plots)
+LORBIT = 11
  
 Electronic Relaxation
 ISMEAR =  0            (Gaussian smearing, metals:1)
@@ -28,7 +29,7 @@ EDIFF  =  1E-06        (SCF energy convergence, in eV)
 # GGA  =  PS           (PBEsol exchange-correlation)
  
 Ionic Relaxation
-NSW    =  300          (Max ionic steps)
+NSW    =  0          (Max ionic steps)
 IBRION =  2            (Algorithm: 0-MD, 1-Quasi-New, 2-CG)
 ISIF   =  2            (Stress/relaxation: 2-Ions, 3-Shape/Ions/V, 4-Shape/Ions)
 EDIFFG = -2E-02        (Ionic convergence, eV/AA)
@@ -47,3 +48,10 @@ LDAUL   =  3 -1 2        (Orbitals for each species)
 LDAUU   =  5.0  0 2.0         (U for each species)
 LDAUJ   =  0  0  0       (J for each species)
 LMAXMIX =  6            (Mixing cut-off, 4-d, 6-f)
+
+ partial charge densities:
+   LPARD = .TRUE.
+   LSEPK = .FALSE.
+   LSEPB = .FALSE.
+   NBMOD = -3
+   EINT = -0.1 0.1
