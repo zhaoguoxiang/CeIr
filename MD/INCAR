@@ -27,16 +27,16 @@ EDIFF  =  1E-04        (SCF energy convergence, in eV)
 # GGA  =  PS           (PBEsol exchange-correlation)
  
 Ionic Relaxation
-NSW    =  300          (Max ionic steps)
-POTIM = 20
+NSW    =  1000          (Max ionic steps)
+POTIM = 1
 IBRION =  0            (Algorithm: 0-MD, 1-Quasi-New, 2-CG)
 ISIF   =  2            (Stress/relaxation: 2-Ions, 3-Shape/Ions/V, 4-Shape/Ions)
-EDIFFG = -2E-02        (Ionic convergence, eV/AA)
+EDIFFG = -1E-02        (Ionic convergence, eV/AA)
 # ISYM =  2            (Symmetry: 0=none, 2=GGA, 3=hybrids)
+SMASS = 0
 TEBEG = 300
 TEEND = 300 
-NBLOCK =1
-KBLOCK =1
+NBLOCK =10
 NCORE  = 4
 
 
